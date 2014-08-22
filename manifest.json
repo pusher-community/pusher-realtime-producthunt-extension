@@ -3,7 +3,7 @@
 
   "name": "Realtime Product Hunt Notifications",
   "description": "Next miss a post on Product Hunt with this realtime notification extension for Chrome.",
-  "version": "0.0.1",
+  "version": "0.0.2",
 
   "icons": {
     "16": "ph-icon.png",
