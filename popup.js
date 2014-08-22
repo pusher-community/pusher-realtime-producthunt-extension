@@ -10,7 +10,7 @@ var init = function() {
   posts = document.querySelector(".posts");
 
   // Request most recent Product Hunt posts
-  $.getJSON("http://localhost:5001/posts", function(posts) {
+  $.getJSON("http://realtime-producthunt.pusher.io/posts", function(posts) {
     // Reverse posts
     posts.reverse();
 

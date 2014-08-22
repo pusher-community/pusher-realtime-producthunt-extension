@@ -5,10 +5,17 @@
   "description": "Next miss a post on Product Hunt with this realtime notification extension for Chrome.",
   "version": "0.0.1",
 
+  "icons": {
+    "16": "ph-icon.png",
+    "48": "ph-icon.png",
+    "128": "ph-icon.png"
+  },
+
   "content_security_policy": "script-src 'self' https://js.pusher.com https://cdnjs.cloudflare.com; object-src 'self'",
   "permissions": [
     "notifications",
     "http://localhost/*",
+    "http://realtime-producthunt.pusher.io/*",
     "http://fonts.googleapis.com/*"
   ],
   "browser_action": {
