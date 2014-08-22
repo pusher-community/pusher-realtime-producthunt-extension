@@ -15,7 +15,7 @@
   "permissions": [
     "notifications",
     "http://localhost/*",
-    "http://realtime-producthunt.pusher.io/*",
+    "http://realtime-producthunt.herokuapp.com/*",
     "http://fonts.googleapis.com/*"
   ],
   "browser_action": {
