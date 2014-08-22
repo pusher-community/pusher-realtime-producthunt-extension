@@ -4,7 +4,7 @@ Never miss a post on Product Hunt with this realtime notification extension for 
 
 [Install extension]()
 
-![](http://cl.ly/image/2e2Y200r453H/Screen%20Shot%202014-08-22%20at%2015.56.06.png)
+[![](http://cl.ly/image/2e2Y200r453H/Screen%20Shot%202014-08-22%20at%2015.56.06.png)]()
 
 
 ## API overview
