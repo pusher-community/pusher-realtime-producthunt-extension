@@ -6,6 +6,9 @@ Pusher.log = function(message) {
 };
 
 var cache = [];
+var badgeCount = 0;
+
+chrome.browserAction.setBadgeBackgroundColor({color: [100,100,100,255]});
 
 var pusher = new Pusher("7c1db8905b12d9aa6a03", {
   // Disable stats purely because Chrome doesn't allow non-HTTPS scripts
@@ -15,6 +18,10 @@ var pusher = new Pusher("7c1db8905b12d9aa6a03", {
 var popupPort;
 chrome.extension.onConnect.addListener(function(port) {
   popupPort = port;
+
+  // Reset badge count when popup is open
+  badgeCount = 0;
+  chrome.browserAction.setBadgeText({text: ""});
 
   popupPort.onDisconnect.addListener(function() {
     popupPort = undefined;
@@ -31,10 +38,19 @@ channel.bind("new-post", function(post) {
     type: "basic",
     title: post.name,
     message: post.tagline,
-    iconUrl: "icon.png"
+    iconUrl: "ph-notification-icon.png",
+    isClickable: true
   }
 
   chrome.notifications.create("new-post-" + post.id, options, function(id) {});
+
+  chrome.notifications.onClicked.addListener(function() {
+    window.open(post.discussion_url);
+  });
+
+  badgeCount++;
+
+  chrome.browserAction.setBadgeText({text: badgeCount.toString()});
 
   // Send post to popup if connected
   if (popupPort) {
