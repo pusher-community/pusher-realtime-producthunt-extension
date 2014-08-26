@@ -12,7 +12,7 @@ Never miss a post on Product Hunt with this realtime notification extension for 
 Here is an overview of the [Realtime Product Hunt API](https://github.com/pusher/pusher-realtime-producthunt):
 
 - The Pusher application key for the realtime Reddit API is `7c1db8905b12d9aa6a03`
-- New posts are published to the `ph-posts` [channel]() using the `new-listing` [event]()
+- New posts are published to the `ph-posts` [channel](http://pusher.com/docs/client_api_guide/client_channels) using the `new-post` [event](http://pusher.com/docs/client_api_guide/client_events)
 - Posts are formatted using the Product Hunt API JSON structure (below)
 
 ```javascript
