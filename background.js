@@ -33,19 +33,25 @@ var channel = pusher.subscribe("ph-posts");
 channel.bind("pusher:subscription_succeeded", function() {});
 
 channel.bind("new-post", function(post) {
-  // Trigger desktop notification
-  var options = {
-    type: "basic",
-    title: post.name,
-    message: post.tagline,
-    iconUrl: "ph-notification-icon.png",
-    isClickable: true
-  }
+  chrome.storage.local.get({
+    notifications: true
+  }, function(items) {
+    if (items.notifications) {
+      // Trigger desktop notification
+      var options = {
+        type: "basic",
+        title: post.name,
+        message: post.tagline,
+        iconUrl: "ph-notification-icon.png",
+        isClickable: true
+      }
 
-  chrome.notifications.create("new-post-" + post.id, options, function(id) {});
+      chrome.notifications.create("new-post-" + post.id, options, function(id) {});
 
-  chrome.notifications.onClicked.addListener(function() {
-    window.open(post.discussion_url);
+      chrome.notifications.onClicked.addListener(function() {
+        window.open(post.discussion_url);
+      });
+    }
   });
 
   badgeCount++;

@@ -14,6 +14,7 @@
   "content_security_policy": "script-src 'self' https://js.pusher.com https://cdnjs.cloudflare.com; object-src 'self'",
   "permissions": [
     "notifications",
+    "storage",
     "http://localhost/*",
     "http://realtime-producthunt.herokuapp.com/*",
     "http://fonts.googleapis.com/*"
@@ -24,5 +25,6 @@
   },
   "background": {
     "page": "background.html"
-  }
+  },
+  "options_page": "options.html"
 }
