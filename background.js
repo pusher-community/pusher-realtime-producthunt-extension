@@ -5,7 +5,7 @@ Pusher.log = function(message) {
   }
 };
 
-var cache = [];
+var notificationCache = {};
 var badgeCount = 0;
 
 chrome.browserAction.setBadgeBackgroundColor({color: [100,100,100,255]});
@@ -32,7 +32,20 @@ var channel = pusher.subscribe("ph-posts");
 
 channel.bind("pusher:subscription_succeeded", function() {});
 
-channel.bind("new-post", function(post) {
+chrome.notifications.onClicked.addListener(function(id) {
+  var post = notificationCache[id];
+
+  if (!post || !post.discussion_url) {
+    return;
+  }
+
+  window.open(post.discussion_url);
+
+  // Remove post from notification cache
+  delete notificationCache[post.id];
+});
+
+channel.bind("new-post-test", function(post) {
   chrome.storage.local.get({
     notifications: true
   }, function(items) {
@@ -47,16 +60,14 @@ channel.bind("new-post", function(post) {
       }
 
       chrome.notifications.create("new-post-" + post.id, options, function(id) {});
-
-      chrome.notifications.onClicked.addListener(function() {
-        window.open(post.discussion_url);
-      });
     }
   });
 
   badgeCount++;
 
   chrome.browserAction.setBadgeText({text: badgeCount.toString()});
+
+  notificationCache["new-post-" + post.id] = post;
 
   // Send post to popup if connected
   if (popupPort) {
