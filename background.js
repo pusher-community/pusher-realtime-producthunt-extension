@@ -45,7 +45,7 @@ chrome.notifications.onClicked.addListener(function(id) {
   delete notificationCache[post.id];
 });
 
-channel.bind("new-post-test", function(post) {
+channel.bind("new-post", function(post) {
   chrome.storage.local.get({
     notifications: true
   }, function(items) {
