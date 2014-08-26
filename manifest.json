@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
 
-  "name": "Realtime Product Hunt Notifications",
+  "name": "Realtime Product Hunt",
   "description": "Never miss a post on Product Hunt with this realtime notification extension for Chrome.",
   "version": "0.1.0",
 

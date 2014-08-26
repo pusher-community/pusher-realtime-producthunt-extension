@@ -2,9 +2,9 @@
 
 Never miss a post on Product Hunt with this realtime notification extension for Chrome, powered by [Pusher](http://pusher.com).
 
-[Install extension]()
+[Install extension](https://chrome.google.com/webstore/detail/realtime-product-hunt/cbcmhcjgmcclchcebjlfgpeedjcgjfib?hl=en&gl=GB)
 
-[![](http://cl.ly/image/2e2Y200r453H/Screen%20Shot%202014-08-22%20at%2015.56.06.png)]()
+[![](http://cl.ly/image/2e2Y200r453H/Screen%20Shot%202014-08-22%20at%2015.56.06.png)](https://chrome.google.com/webstore/detail/realtime-product-hunt/cbcmhcjgmcclchcebjlfgpeedjcgjfib?hl=en&gl=GB)
 
 
 ## API overview
