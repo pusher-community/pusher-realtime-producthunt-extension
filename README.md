@@ -12,7 +12,7 @@ Never miss a post on Product Hunt with this realtime notification extension for 
 Here is an overview of the [Realtime Product Hunt API](https://github.com/pusher/pusher-realtime-producthunt):
 
 - The Pusher application key for the realtime Reddit API is `7c1db8905b12d9aa6a03`
-- New posts are published to the `ph-posts` [channel](http://pusher.com/docs/client_api_guide/client_channels) using the `new-post` [event](http://pusher.com/docs/client_api_guide/client_events)
+- New posts are published to the `ph-posts` [channel](https://pusher.com/docs/client_api_guide/client_channels) using the `new-post` [event](https://pusher.com/docs/client_api_guide/client_events)
 - Posts are formatted using the Product Hunt API JSON structure (below)
 
 ```javascript
@@ -54,13 +54,13 @@ Here is an overview of the [Realtime Product Hunt API](https://github.com/pusher
 
 ## Using the API
 
-The Realtime Product Hunt API has been built with simplicity in mind. All you need to do is subscribe using [one of Pusher's free platform libraries](http://pusher.com/docs/libraries) and decide what you want to do with each post.
+The Realtime Product Hunt API has been built with simplicity in mind. All you need to do is subscribe using [one of Pusher's free platform libraries](https://pusher.com/docs/libraries) and decide what you want to do with each post.
 
 [Here's an example](http://jsbin.com/sikel/2/edit?html,js,console) that uses JavaScript and outputs each new post to the browser console:
 
 ```html
 <!-- Include the Pusher JavaScript library -->
-<script src="http://js.pusher.com/2.2/pusher.min.js"></script>
+<script src="//js.pusher.com/3.0/pusher.min.js"></script>
 
 <script>
   // Open a Pusher connection to the Realtime Product Hunt API
