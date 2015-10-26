@@ -10,7 +10,7 @@ var init = function() {
   posts = document.querySelector(".posts");
 
   // Request most recent Product Hunt posts
-  $.getJSON("http://realtime-producthunt.herokuapp.com/posts?" + Date.now(), function(posts) {
+  $.getJSON("https://realtime-producthunt.herokuapp.com/posts?" + Date.now(), function(posts) {
     // Reverse posts
     posts.reverse();
 

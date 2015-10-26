@@ -16,8 +16,8 @@
     "notifications",
     "storage",
     "http://localhost/*",
-    "http://realtime-producthunt.herokuapp.com/*",
-    "http://fonts.googleapis.com/*"
+    "https://realtime-producthunt.herokuapp.com/*",
+    "https://fonts.googleapis.com/*"
   ],
   "browser_action": {
     "default_icon": "ph-icon.png",
