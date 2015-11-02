@@ -75,3 +75,13 @@ The Realtime Product Hunt API has been built with simplicity in mind. All you ne
   });
 </script>
 ```
+
+## Building the Extension
+
+Run:
+
+```bash
+$ build/build.sh
+```
+
+This will create a `build/pusher-realtime-producthunt.zip` file. This can then be used when publishing and updated version to the Chrome WebStore.
