@@ -81,7 +81,7 @@ The Realtime Product Hunt API has been built with simplicity in mind. All you ne
 Run:
 
 ```bash
-$ build/build.sh
+$ script/build.sh
 ```
 
-This will create a `build/pusher-realtime-producthunt.zip` file. This can then be used when publishing and updated version to the Chrome WebStore.
+This will create a `dist/pusher-realtime-producthunt.zip` file. This can then be used when publishing and updated version to the Chrome WebStore.
